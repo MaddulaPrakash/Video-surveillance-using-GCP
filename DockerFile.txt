@@ -1,0 +1,32 @@
+FROM tensorflow/tensorflow:latest-gpu
+
+WORKDIR /app
+
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        curl \
+        gnupg \
+        lsb-release && \
+    export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && \
+    echo "deb https://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | \
+        tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | \
+        apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - && \
+    apt-get update && \
+    apt-get install -y google-cloud-sdk && \
+    rm -rf /var/lib/apt/lists/*
+
+
+
+RUN gsutil cp gs://your-mksp-bucket/object_detection_model.pb /app/object_detection_model.pb
+
+
+# COPY /content/requirements.txt /app/
+# RUN pip install --no-cache-dir -r /content/requirements.txt
+
+# Expose the port if your model has a serving API
+# EXPOSE 8501
+
+# Command to run model
+CMD ["python", "model_script.py"]

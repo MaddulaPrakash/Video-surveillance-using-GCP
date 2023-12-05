@@ -1,0 +1,2 @@
+docker build -t gcr.io/my-first-project/my-mksp-bucket/docker-image:tag
+docker push gcr.io/my-first-project/my-mksp-bucket/docker-image:tag

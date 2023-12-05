@@ -1,0 +1,221 @@
+Welcome to the Google Cloud CLI! Run "gcloud -h" to get the list of available commands.
+---
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud auth login
+Your browser has been opened to visit:
+
+    https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=32555940559.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8085%2F&scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fsqlservice.login+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth&state=2nvGVAP12taxebi9uGDYmg9XJtasz1&access_type=offline&code_challenge=InfBdwYx8sdtV1xyPw4odBbIJ0nAm1Lco23m5LM6Kac&code_challenge_method=S256
+
+
+You are now logged in as [mksp3196@gmail.com].
+Your current project is [fluent-aileron-402402].  You can change this setting by running:
+  $ gcloud config set project PROJECT_ID
+
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>gcloud config set compute/region us-central1
+Updated property [compute/region].
+
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters create <your-cluster-name> \
+The system cannot find the file specified.
+
+C:\Program Files (x86)\Google\Cloud SDK>  --region=<your-region> \
+The system cannot find the file specified.
+
+C:\Program Files (x86)\Google\Cloud SDK>  --master-machine-type=n1-standard-2 \
+'--master-machine-type' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files (x86)\Google\Cloud SDK>  --worker-machine-type=n1-standard-2 \
+'--worker-machine-type' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files (x86)\Google\Cloud SDK>  --num-workers=2
+'--num-workers' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters create my-mks-cluster \
+ERROR: (gcloud.dataproc.clusters.create) unrecognized arguments: \
+
+To search the help text of gcloud commands, run:
+  gcloud help -- SEARCH_TERMS
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters create my-mks-cluster \
+ERROR: (gcloud.dataproc.clusters.create) unrecognized arguments: \
+
+To search the help text of gcloud commands, run:
+  gcloud help -- SEARCH_TERMS
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters create my-mks-cluster --region gcloud dataproc clusters create <your-cluster-name> \
+The system cannot find the file specified.
+
+C:\Program Files (x86)\Google\Cloud SDK>  --region=<your-region> \
+The system cannot find the file specified.
+
+C:\Program Files (x86)\Google\Cloud SDK>  --master-machine-type=n1-standard-2 \
+'--master-machine-type' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files (x86)\Google\Cloud SDK>  --worker-machine-type=n1-standard-2 \
+'--worker-machine-type' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files (x86)\Google\Cloud SDK>  --num-workers=2
+'--num-workers' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters create my-mks-cluster --region=us-central1
+Waiting on operation [projects/fluent-aileron-402402/regions/us-central1/operations/4c9d23f6-cea0-31f3-b084-c884c08b2d3b].
+Waiting for cluster creation operation...|
+WARNING: No image specified. Using the default image version. It is recommended to select a specific image version in production, as the default image version may change at any time.
+WARNING: Consider using Auto Zone rather than selecting a zone manually. See https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone
+WARNING: Failed to validate permissions required for default service account: '231185603346-compute@developer.gserviceaccount.com'. Cluster creation could still be successful if required permissions have been granted to the respective service accounts as mentioned in the document https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#dataproc_service_accounts_2. This could be due to Cloud Resource Manager API hasn't been enabled in your project '231185603346' before or it is disabled. Enable it by visiting 'https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=231185603346'.
+WARNING: The firewall rules for specified network or subnetwork would allow ingress traffic from 0.0.0.0/0, which could be a security risk.
+Waiting for cluster creation operation...aborted by ctrl-c.
+ERROR: (gcloud.dataproc.clusters.create) Aborted by user.
+Terminate batch job (Y/N)?
+^CTerminate batch job (Y/N)? Y
+
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters create my-mks-cluster --region=us-central1 --master-machine-type=n1-standard-2 --worker-machine-type=n1-standard-2 --num-workers=2
+ERROR: (gcloud.dataproc.clusters.create) INVALID_ARGUMENT: Multiple validation errors:
+ - Insufficient 'DISKS_TOTAL_GB' quota. Requested 3000.0, available 1096.0.
+ - Insufficient 'IN_USE_ADDRESSES' quota. Requested 3.0, available 2.0.
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters create my-mks-cluster --region=us-central1 --master-machine-type=n1-standard-1 --worker-machine-type=n1-standard-1 --num-workers=2
+ERROR: (gcloud.dataproc.clusters.create) INVALID_ARGUMENT: Multiple validation errors:
+ - Creating clusters using the n1-standard-1 machine type is not supported for image version 2.0.85-debian10.
+ - Insufficient 'DISKS_TOTAL_GB' quota. Requested 3000.0, available 1096.0.
+ - Insufficient 'IN_USE_ADDRESSES' quota. Requested 3.0, available 2.0.
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters create my-mks-cluster --region=us-central1
+ERROR: (gcloud.dataproc.clusters.create) INVALID_ARGUMENT: Multiple validation errors:
+ - Insufficient 'CPUS' quota. Requested 12.0, available 9.0.
+ - Insufficient 'DISKS_TOTAL_GB' quota. Requested 3000.0, available 1096.0.
+ - Insufficient 'IN_USE_ADDRESSES' quota. Requested 3.0, available 2.0.
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters create my-mksp-cluster --region=us-central1
+ERROR: (gcloud.dataproc.clusters.create) INVALID_ARGUMENT: Multiple validation errors:
+ - Insufficient 'CPUS' quota. Requested 12.0, available 9.0.
+ - Insufficient 'DISKS_TOTAL_GB' quota. Requested 3000.0, available 1096.0.
+ - Insufficient 'IN_USE_ADDRESSES' quota. Requested 3.0, available 2.0.
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters list --region=<your-region>
+The syntax of the command is incorrect.
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters list --region=us-central1
+NAME            PLATFORM  PRIMARY_WORKER_COUNT  SECONDARY_WORKER_COUNT  STATUS   ZONE           SCHEDULED_DELETE
+my-mks-cluster  GCE       2                                             RUNNING  us-central1-a
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters delete <your-cluster-name> --region=<your-region>
+The syntax of the command is incorrect.
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters delete my-mks-cluster --region=us-central1
+The cluster 'my-mks-cluster' and all attached disks will be deleted.
+
+Do you want to continue (Y/n)?  Y
+
+Waiting on operation [projects/fluent-aileron-402402/regions/us-central1/operations/071616a4-62e2-3b46-8f42-b37ac276a0a3].
+Waiting for cluster deletion operation...done.
+Deleted [https://dataproc.googleapis.com/v1/projects/fluent-aileron-402402/regions/us-central1/clusters/my-mks-cluster].
+
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters create my-mksp-cluster --region=us-central1
+Waiting on operation [projects/fluent-aileron-402402/regions/us-central1/operations/1014269a-4fd8-3b57-858b-5047ca06f5d5].
+Waiting for cluster creation operation...\
+WARNING: No image specified. Using the default image version. It is recommended to select a specific image version in production, as the default image version may change at any time.
+WARNING: Consider using Auto Zone rather than selecting a zone manually. See https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone
+WARNING: Failed to validate permissions required for default service account: '231185603346-compute@developer.gserviceaccount.com'. Cluster creation could still be successful if required permissions have been granted to the respective service accounts as mentioned in the document https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#dataproc_service_accounts_2. This could be due to Cloud Resource Manager API hasn't been enabled in your project '231185603346' before or it is disabled. Enable it by visiting 'https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=231185603346'.
+WARNING: The firewall rules for specified network or subnetwork would allow ingress traffic from 0.0.0.0/0, which could be a security risk.
+Waiting for cluster creation operation...done.
+Created [https://dataproc.googleapis.com/v1/projects/fluent-aileron-402402/regions/us-central1/clusters/my-mksp-cluster] Cluster placed in zone [us-central1-a].
+
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters delete my-mks-cluster --region=us-central1
+The cluster 'my-mks-cluster' and all attached disks will be deleted.
+
+Do you want to continue (Y/n)?  y
+
+ERROR: (gcloud.dataproc.clusters.delete) NOT_FOUND: Not found: Cluster projects/fluent-aileron-402402/regions/us-central1/clusters/my-mks-cluster
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters list --region=us-central1
+NAME             PLATFORM  PRIMARY_WORKER_COUNT  SECONDARY_WORKER_COUNT  STATUS   ZONE           SCHEDULED_DELETE
+my-mksp-cluster  GCE       2                                             RUNNING  us-central1-a
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters delete my-mksp-cluster --region=us-central1
+The cluster 'my-mksp-cluster' and all attached disks will be deleted.
+
+Do you want to continue (Y/n)?  y
+
+Waiting on operation [projects/fluent-aileron-402402/regions/us-central1/operations/eb1ceccc-4750-3a88-839e-fa777670a1fa].
+Waiting for cluster deletion operation...done.
+Deleted [https://dataproc.googleapis.com/v1/projects/fluent-aileron-402402/regions/us-central1/clusters/my-mksp-cluster].
+
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters create my-mks-cluster --region=us-central1 --master-machine-type=n1-standard-1 --worker-machine-type=n1-standard-1 --num-workers=2
+ERROR: (gcloud.dataproc.clusters.create) INVALID_ARGUMENT: Creating clusters using the n1-standard-1 machine type is not supported for image version 2.0.85-debian10.
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters create my-mks-cluster --region=us-central1
+Waiting on operation [projects/fluent-aileron-402402/regions/us-central1/operations/3abd7e36-5aa1-3920-8df3-f480cf71397e].
+Waiting for cluster creation operation...\
+WARNING: No image specified. Using the default image version. It is recommended to select a specific image version in production, as the default image version may change at any time.
+WARNING: Consider using Auto Zone rather than selecting a zone manually. See https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone
+WARNING: Failed to validate permissions required for default service account: '231185603346-compute@developer.gserviceaccount.com'. Cluster creation could still be successful if required permissions have been granted to the respective service accounts as mentioned in the document https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#dataproc_service_accounts_2. This could be due to Cloud Resource Manager API hasn't been enabled in your project '231185603346' before or it is disabled. Enable it by visiting 'https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=231185603346'.
+WARNING: The firewall rules for specified network or subnetwork would allow ingress traffic from 0.0.0.0/0, which could be a security risk.
+Waiting for cluster creation operation...done.
+Created [https://dataproc.googleapis.com/v1/projects/fluent-aileron-402402/regions/us-central1/clusters/my-mks-cluster] Cluster placed in zone [us-central1-a].
+
+C:\Program Files (x86)\Google\Cloud SDK>
+C:\Program Files (x86)\Google\Cloud SDK>Ygcloud compute ssh my-mks-cluster-m --region=us-central1
+'Ygcloud' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud compute ssh my-mks-cluster-m --region=us-central1
+ERROR: (gcloud.compute.ssh) argument --region: --network must be specified.
+Usage: gcloud compute ssh [USER@]INSTANCE [optional flags] [-- SSH_ARGS ...]
+  optional flags may be  --command | --container | --dest-group | --dry-run |
+                         --force-key-file-overwrite | --help | --internal-ip |
+                         --network | --plain | --region | --ssh-flag |
+                         --ssh-key-expiration | --ssh-key-expire-after |
+                         --ssh-key-file | --strict-host-key-checking |
+                         --troubleshoot | --tunnel-through-iap | --zone
+
+For detailed information on this command and its flags, run:
+  gcloud compute ssh --help
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud dataproc clusters list --region=us-central1
+NAME            PLATFORM  PRIMARY_WORKER_COUNT  SECONDARY_WORKER_COUNT  STATUS   ZONE           SCHEDULED_DELETE
+my-mks-cluster  GCE       2                                             RUNNING  us-central1-a
+
+C:\Program Files (x86)\Google\Cloud SDK>gcloud compute ssh my-mks-cluster-m --zone=us-central1-a
+WARNING: The private SSH key file for gcloud does not exist.
+WARNING: The public SSH key file for gcloud does not exist.
+WARNING: The PuTTY PPK SSH key file for gcloud does not exist.
+WARNING: You do not have an SSH key for gcloud.
+WARNING: SSH keygen will be executed to generate a key.
+This tool needs to create the directory [C:\Users\mksp3\.ssh] before being able to generate SSH keys.
+
+Do you want to continue (Y/n)?  y
+
+Updating project ssh metadata...-Updated [https://www.googleapis.com/compute/v1/projects/fluent-aileron-402402].
+Updating project ssh metadata...done.
+Waiting for SSH key to propagate.
+The server's host key is not cached. You have no guarantee
+that the server is the computer you think it is.
+The server's ssh-ed25519 key fingerprint is:
+ssh-ed25519 255 SHA256:C0UbpkwzmHEJXOtPczg3lTjsdnkQy+XQyocEMFujiqQ
+If you trust this host, enter "y" to add the key to
+PuTTY's cache and carry on connecting.
+If you want to carry on connecting just once, without
+adding the key to the cache, enter "n".
+If you do not trust this host, press Return to abandon the
+connection.
+Store key in cache? (y/n, Return cancels connection, i for more info)

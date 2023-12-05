@@ -1,0 +1,8 @@
+#to deploy the model
+kubectl apply -f kubernetes-deploy.yaml
+
+#to scale the replicas
+kubectl scale deployment yolo-deployment --replicas=10
+
+#clean up the resources
+kubectl delete deployment yolo-deployment
